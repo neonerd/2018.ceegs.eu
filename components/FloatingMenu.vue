@@ -4,7 +4,7 @@
         .row.align-items-center
             .col
                 h1 CEEGS 2018
-            .col-8
+            .col-8.d-none.d-sm-block.d-md-block.d-lg-block.d-xl-block
                 menu
                     li
                         a(href="#About") About

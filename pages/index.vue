@@ -16,9 +16,10 @@
     .content-block(v-for="block in parsedBlocks", :id="block.uid")
       .container
         .row
-          .text-block
-            h2 {{ block.title }}
-            div(v-html="block.html")        
+          .col
+            .text-block
+              h2 {{ block.title }}
+              div(v-html="block.html")        
     // == End of Content Blocks
 </template>
 
@@ -32,6 +33,10 @@
   background-repeat: repeat-x;
   background-image: url('/images/hero_bg.svg');
   background-position: -0px 500px;
+
+  @media (max-width: 768px) {
+    background-position: bottom;
+  }
 }
 .hero-container {
   height: 100vh;
@@ -47,6 +52,15 @@
   h1 {
     font-weight: 600;
     font-size: 6rem;
+
+    @media (max-width: 768px) {
+      font-size: 4rem;
+    }
+  }
+  h2 {
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -61,7 +75,13 @@
 
   .text-block {
     display: block;
-    max-width: 800px;
+    @media(min-width: 768px) {
+      max-width: 800px;
+    }
+    @media(max-width: 767px) {
+      width: 100%;
+      overflow: hidden;
+    }
     margin: 0 auto;
   }
 
@@ -112,7 +132,7 @@ import {getContentBlocks} from '@/api'
 
 const shortcodes = {
   '[[RegisterButton]]': '<a href="/register" class="btn btn-primary btn-register-block">Register now</a>',
-  '[[GoogleMap]]': '<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1h32F70XXvF5D2chcqR06YwpsjtkRU4RY" width="640" height="480" class="google-maps"></iframe>'
+  '[[GoogleMap]]': '<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1h32F70XXvF5D2chcqR06YwpsjtkRU4RY" height="480" class="google-maps"></iframe>'
 }
 
 const applyShortcodes = (t) => {
