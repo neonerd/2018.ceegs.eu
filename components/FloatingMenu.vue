@@ -11,6 +11,8 @@
                     li
                         a(href="#RegistrationAndPayment")  Registration &amp; Payment
                     li
+                        a(href="#Submissions") Call for Papers
+                    li
                         a(href="#PracticalInfo") Practical Info
                     li
                         a(href="#History") History
