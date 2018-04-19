@@ -9,9 +9,9 @@
                     li
                         a(href="#About") About
                     li
-                        a(href="#RegistrationAndPayment")  Registration &amp; Payment
+                        a(href="#Submissions") Submissions
                     li
-                        a(href="#Submissions") Call for Papers
+                        a(href="#RegistrationAndPayment")  Registration
                     li
                         a(href="#PracticalInfo") Practical Info
                     li
