@@ -7,6 +7,8 @@
             .col-8.d-none.d-sm-block.d-md-block.d-lg-block.d-xl-block
                 menu
                     li
+                        a(href="#Workshops") Workshops
+                    li
                         a(href="#About") About
                     li
                         a(href="#Submissions") Submissions
