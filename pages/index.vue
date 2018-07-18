@@ -164,6 +164,9 @@ export default {
     var scroll = SmoothScroll('a[href*="#"]', {
       offset: 50
     })
+    if (window.location.hash) {
+      scroll.animateScroll(document.getElementById(window.location.hash.replace('#', '')))
+    }
   },
 
   async asyncData () {
