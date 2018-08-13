@@ -18,13 +18,34 @@
                         a(href="#PracticalInfo") Practical Info
                     li
                         a(href="#History") History
-            .col.right
+            .col.right.d-none.d-sm-block.d-md-block.d-lg-block.d-xl-block
                 nuxt-link(to="/register").btn.btn-primary Register now
+            .col.right.d-sm-none.d-md-none.d-lg-none.d-xl-none
+                a(@click="isMobileMenuShown=!isMobileMenuShown").fa.fa-bars
+        .row(v-if="isMobileMenuShown").mobile-menu-wrapper
+            .col
+                menu.mobile-menu
+                    li
+                        a(href="#Workshops", @click="isMobileMenuShown=false") Workshops
+                    li
+                        a(href="#About", @click="isMobileMenuShown=false") About
+                    li
+                        a(href="#Submissions", @click="isMobileMenuShown=false") Submissions
+                    li
+                        a(href="#RegistrationAndPayment", @click="isMobileMenuShown=false")  Registration
+                    li
+                        a(href="#PracticalInfo", @click="isMobileMenuShown=false") Practical Info
+                    li
+                        a(href="#History", @click="isMobileMenuShown=false") History
 </template>
 
 <script>
 export default {
-
+    data () {
+        return {
+            isMobileMenuShown: false
+        }
+    }
 }
 </script>
 
@@ -81,8 +102,26 @@ export default {
         }
     }
 
+    .mobile-menu-wrapper {
+        background-color: #fff;
+        height: auto;
+        padding: 2rem 0rem;
+    }
+
+    .mobile-menu {
+
+        li {
+            display: block;
+            margin: 1rem 0rem;
+        }
+    }
+
     .right {
         text-align: right;
+    }
+
+    .fa-bars {
+        font-size: 2rem;
     }
 }
 </style>

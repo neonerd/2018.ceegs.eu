@@ -21,6 +21,19 @@
               h2 {{ block.title }}
               div(v-html="block.html")        
     // == End of Content Blocks
+    // == Start of footer
+    .content-block
+      .container
+        .row
+          .col
+            .text-block
+              h2.social-heading Stay in touch
+              p.social
+                a(href="https://www.facebook.com/CEEGameStudies/", target="_blank").fab.fa-facebook
+                a(href="https://twitter.com/ceegsconf", target="_blank").fab.fa-twitter
+                a(href="mailto: contact@ceegs.eu").fas.fa-envelope
+              p.copyright
+                | &copy; CEEGS 2018
 </template>
 
 <style lang="scss" scoped>
@@ -159,6 +172,27 @@
       font-weight: 700;
     }
   }
+}
+
+.social {
+  text-align: center;
+  .fab, .fas {
+    margin: 0rem 1rem;
+    text-decoration: none;
+    font-size: 3rem;
+  }
+}
+.social-heading {
+  text-align: center;
+  display: block !important;
+  &::after {
+    margin: 0 auto;
+  }
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 4rem;
 }
 </style>
 
