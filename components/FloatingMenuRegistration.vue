@@ -3,7 +3,7 @@
     .container-fluid
         .row.align-items-center
             .col
-                h1 CEEGS 2018
+                img(src="/images/ceegs_2018_logo_small.svg").logo
             .col-8
             .col.right
                 nuxt-link(to="/").btn.btn-secondary Back to homepage
@@ -26,6 +26,10 @@ export default {
     height: 80px;
     background-color: #fff;
     box-shadow: 0px 10px 42px 0px rgba(0,0,0,0.25);
+
+    .logo {
+        max-width: 75px;
+    }
 
     .row {
         height: 80px;

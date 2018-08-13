@@ -3,7 +3,7 @@
     .container-fluid
         .row.align-items-center
             .col
-                h1 CEEGS 2018
+                img(src="/images/ceegs_2018_logo_small.svg").logo
             .col-8.d-none.d-sm-block.d-md-block.d-lg-block.d-xl-block
                 menu
                     li
@@ -40,6 +40,10 @@ export default {
     background-color: #fff;
     box-shadow: 0px 10px 42px 0px rgba(0,0,0,0.25);
 
+    .logo {
+        max-width: 75px;
+    }
+
     .row {
         height: 80px;
     }
@@ -66,11 +70,13 @@ export default {
         a {
             font-weight: 700;
             font-size: 1rem;
-            color: #000;
-            border-bottom: 2px solid #000;
+            color: #13235b;
+            border-bottom: 2px solid #13235b;
 
             &:hover {
                 text-decoration: none;
+                color: #42a62a;
+                border-color: #42a62a;;
             }
         }
     }

@@ -1,15 +1,52 @@
 $clr-bg-day: #F9F4CF;
 $clr-bg-night: #0D0445;
 
+$clr-darkBlue: #13235b;
+$clr-yellow: #fd0;
+$clr-green: #42a62a;
+
 body {
-    background-color: $clr-bg-day;
     font-family: "Open Sans", sans-serif;
     width: 100vw;
     // padding-bottom: 10vh;
 
+    color: $clr-darkBlue;
     overflow-x: hidden;
 }
 
+a {
+    color: $clr-darkBlue;
+}
+
+.btn-primary {
+    background-color: $clr-darkBlue;
+    border-color: $clr-darkBlue;
+    outline: 0;
+
+    &:hover, &:active {
+        background-color: $clr-green !important;
+        border-color: $clr-green !important;
+    }
+}
+
+.form-group {
+    label {
+        font-weight: 600;
+    }
+}
+
+.form-control {
+    border-color: $clr-darkBlue;
+    border-radius: 0;
+    border: 2px solid $clr-darkBlue;
+
+    &:focus {
+        border-color: $clr-darkBlue;
+        box-shadow: 0 0 0 0.2rem rgba(20, 36, 91, 0.4);
+    }
+}
+
+// == GLOBAL COMPONENT AND PLUGIN STYLES
 .google-maps {
     display: block;
     margin-top: 3rem;

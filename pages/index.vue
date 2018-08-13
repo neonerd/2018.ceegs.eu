@@ -8,7 +8,7 @@
     .container.hero-container
       .row
         .col.align-self-center
-          h1 CEEGS 2018
+          img(src="/images/ceegs_2018_logo_white.svg").logo
           h2 Ludic Expressions
           h2 October 11-13rd, Prague
     // == End of Hero
@@ -23,16 +23,30 @@
     // == End of Content Blocks
 </template>
 
+<style lang="scss" scoped>
+
+  .logo {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
+</style>
+
 <style lang="scss">
+
+
 .hero-bg {
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100vw;
   height: 100vh;
-  background-repeat: repeat-x;
-  background-image: url('/images/hero_bg.svg');
-  background-position: -0px 500px;
+  // background-repeat: repeat-x;
+  // background-image: url('/images/hero_bg.svg');
+  // background-position: -0px 500px;
+  background: linear-gradient(to bottom, #fd0, #42a62a, #13235b);
 
   @media (max-width: 768px) {
     background-position: bottom;
@@ -42,22 +56,30 @@
   height: 100vh;
 
   .row {
-    height: 80vh;
+    height: 100vh;
   }
 
   .col {
     text-align: left;
   }
 
+  color: #fff;
+  text-align: center;
+
   h1 {
     font-weight: 600;
     font-size: 6rem;
+    text-align: center;
+    
 
     @media (max-width: 768px) {
       font-size: 4rem;
     }
   }
   h2 {
+    text-align: center;
+    
+
     @media (max-width: 768px) {
       font-size: 1.5rem;
     }
@@ -69,8 +91,22 @@
   background-color: #fff;
   padding: 5rem 0;
 
+  a {
+    text-decoration: underline;
+  }
+
   &:nth-child(2n+1) {
-    background-color: #F9F4CF;
+    // background-color: #F9F4CF;
+    background-color: #13235b;
+    color: #fff;
+
+    h2::after {
+      background-color: #fff;
+    }
+  
+    a {
+      color: #fff;
+    }
   }
 
   .text-block {
@@ -88,9 +124,18 @@
   h2 {
     display: inline-block;
     font-weight: 600;
-    border-bottom: 4px solid #000;
+    // border-bottom: 4px solid #000;
     padding-bottom: 0.5rem;
     margin-bottom: 2rem;
+
+    &::after {
+      display: block;
+      content: ' ';
+      height: 12px;
+      margin-top: 2rem;
+      width: 60px;
+      background-color: #13235b;
+    }
   }
 
   h3 {

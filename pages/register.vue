@@ -62,13 +62,22 @@
     margin: 0 auto;
     margin-top: 120px;
     max-width: 800px;
+    padding-bottom: 2rem;
 
     h2 {
         display: inline-block;
         font-weight: 600;
-        border-bottom: 4px solid #000;
         padding-bottom: 0.5rem;
         margin-bottom: 2rem;
+    
+        &::after {
+            display: block;
+            content: ' ';
+            height: 12px;
+            margin-top: 2rem;
+            width: 60px;
+            background-color: #13235b;
+        }
     }
 
     p {
