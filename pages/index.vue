@@ -270,7 +270,7 @@ export default {
     const blocks = await getContentBlocks()
 
     return {
-      blocks: blocks.items
+      blocks: blocks.items.filter(i => i.fields.uid != "Tips")
     }
   }
 }
