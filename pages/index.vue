@@ -9,8 +9,10 @@
       .row
         .col.align-self-center
           img(src="/images/ceegs_2018_logo_white.svg").logo
+          .separator
           h2 Ludic Expressions
-          h2 October 11-13rd, Prague
+          h2 October 11-13
+          h2 Prague
     // == End of Hero
     // == Start of Content Blocks
     .content-block(v-for="block in parsedBlocks", :id="block.uid")
@@ -56,10 +58,11 @@
   left: 0px;
   width: 100vw;
   height: 100vh;
-  // background-repeat: repeat-x;
-  // background-image: url('/images/hero_bg.svg');
-  // background-position: -0px 500px;
-  background: linear-gradient(to bottom, #fd0, #42a62a, #13235b);
+  background-repeat: repeat-x;
+  background-image: url('/images/hero_bg_final.svg');
+  background-position: -0px 0px;
+  background-size: cover;
+  // background: linear-gradient(to bottom, #fd0, #42a62a, #13235b);
 
   @media (max-width: 768px) {
     background-position: bottom;
@@ -91,11 +94,26 @@
   }
   h2 {
     text-align: center;
+    font-weight: 700;
     
 
     @media (max-width: 768px) {
       font-size: 1.5rem;
     }
+  }
+
+  .separator {
+    display: block;
+    width: 60px;
+    height: 15px;
+    background-color: #fff;
+    margin: 0px auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+
+  img, h2 {
+    // display: none;
   }
 }
 
