@@ -7,7 +7,7 @@
             .col-8.d-none.d-sm-block.d-md-block.d-lg-block.d-xl-block
                 menu
                     li
-                        a(href="#Workshops") Workshops
+                        a(href="#Keynotes") Keynotes
                     li
                         a(href="#About") About
                     li
@@ -26,7 +26,7 @@
             .col
                 menu.mobile-menu
                     li
-                        a(href="#Workshops", @click="isMobileMenuShown=false") Workshops
+                        a(href="#Keynotes", @click="isMobileMenuShown=false") Keynotes
                     li
                         a(href="#About", @click="isMobileMenuShown=false") About
                     li
