@@ -7,19 +7,19 @@
             .col-8.d-none.d-sm-block.d-md-block.d-lg-block.d-xl-block
                 menu
                     li
+                        a(href="#Essentials") Essentials
+                    li
                         a(href="#Keynotes") Keynotes
                     li
                         a(href="#About") About
                     li
                         a(href="#Submissions") Submissions
                     li
-                        a(href="#RegistrationAndPayment")  Registration
-                    li
                         a(href="#PracticalInfo") Practical Info
                     li
                         a(href="#History") History
             .col.right.d-none.d-sm-block.d-md-block.d-lg-block.d-xl-block
-                nuxt-link(to="/register").btn.btn-primary Register now
+                a(href="/documents/CEEGS_Programme.pdf").btn.btn-primary Download programme
             .col.right.d-sm-none.d-md-none.d-lg-none.d-xl-none
                 a(@click="isMobileMenuShown=!isMobileMenuShown").fa.fa-bars
         .row(v-if="isMobileMenuShown").mobile-menu-wrapper

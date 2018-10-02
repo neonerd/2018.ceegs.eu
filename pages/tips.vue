@@ -5,18 +5,21 @@
             .row
                 .col
                     .tips-content
-                        h2 {{ parsedBlockTitle }}
                         div(v-html="parsedBlockHtml")
 
 
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .tips-content {
     margin: 0 auto;
     margin-top: 120px;
     max-width: 800px;
     padding-bottom: 2rem;
+    
+    a {
+        text-decoration: underline !important;
+    }
 }
 </style>
 

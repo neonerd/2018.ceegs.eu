@@ -14,6 +14,17 @@
           h2 October 11-13
           h2 Prague
     // == End of Hero
+    // == Start of Features
+    .content-block#Essentials
+      .container
+        .row
+          .col
+            .text-block
+              h2 CEEGS 2018 Essentials
+              p.essentials
+                a(href="/documents/CEEGS_Programme.pdf").btn.btn-primary Download programme
+                nuxt-link(to="/tips").btn.btn-primary Prague - Tips &amp; Tricks
+    // == End of Features
     // == Start of Content Blocks
     .content-block(v-for="block in parsedBlocks", :id="block.uid")
       .container
@@ -211,6 +222,17 @@
 .copyright {
   text-align: center;
   margin-top: 4rem;
+}
+
+.essentials {
+  text-align: center;
+  .btn {
+    font-size: 1.5rem;
+    padding: 20px;
+    margin: 0px 20px;
+    margin-top: 40px;
+    text-decoration: none;
+  }
 }
 </style>
 
